@@ -54,10 +54,12 @@ public class WaterBottles21 {
 				return input;
 			} else {
 				printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive\n");
-				return -1;
+				
 			}
 		} catch (InputMismatchException e) {
 			printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive\n");
+			scanner.nextLine();
+			return -1;
 		}  
 
 		return -1;
