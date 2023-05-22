@@ -53,11 +53,11 @@ public class WaterBottles21 {
 			if (input >= 1 && input <= 4) {
 				return input;
 			} else {
-				printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
+				printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive\n");
 				return -1;
 			}
 		} catch (InputMismatchException e) {
-			printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
+			printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive\n");
 		}  
 
 		return -1;
@@ -81,7 +81,7 @@ public class WaterBottles21 {
 		int remaining = 21;
 
 		while(remaining > 1) {
-			printStream.print("How many you would like to pick up? ");
+			printStream.print("How many you would like to pick up? \n");
 			int pick1 = isInputNumberValid();
 			while( pick1 == -1) {
 				pick1 = isInputNumberValid();
@@ -94,7 +94,7 @@ public class WaterBottles21 {
 		}
 
 		if(remaining == 1) {
-			printStream.print("You will have to pick up the last..you are loser");
+			printStream.print("You will have to pick up the last..you are loser\n");
 		}
 	}
 
