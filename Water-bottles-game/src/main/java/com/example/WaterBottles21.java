@@ -45,14 +45,26 @@ public class WaterBottles21 {
 			//   and return back -1
 			 
 			//YOUR CODE STARTS HERE
-                        return -1;
+		 while (true) {
+	            int pick = scanner.nextInt();
+	            if (pick >= 1 && pick <= 4) {
+	                return pick;
+	            } else {
+	                printStream.println("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive.");
+	            }
+	        }
 	                //YOUR CODE ENDS HERE	
 	 }
  
 	 
 	public int pickAfterUser(int pick1) {
 			//YOUR CODE STARTS HERE
-                        return -1;
+		int remaining = bottles - pick1;
+        int pick2 = (remaining - 1) % 5;
+        if (pick2 == 0) {
+            pick2 = 1;
+        }
+        return pick2;
 	                //YOUR CODE ENDS HERE
 	}
 	 
