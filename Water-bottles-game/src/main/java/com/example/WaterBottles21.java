@@ -109,11 +109,11 @@ public class WaterBottles21 {
 		//To print on console, use this.printStream.print() and NOT the System.out.println()
 		//and using the this.printStream.print(), print below contents on console exactly as below
 
-		this.printStream.print("There are 21 Water bottles\n");
-		this.printStream.print("Computer and yourself, there are 2 players\n");
-		this.printStream.print("At a time, each one can pick up any no. of bottles between 1 and 4 (inclusive)\n");
-		this.printStream.print("The one who will have to pick up the last is looser\n");
-		this.printStream.print("Please play first\n");
+		this.printStream.print("\nThere are 21 Water bottles");
+		this.printStream.print("\nComputer and yourself, there are 2 players");
+		this.printStream.print("\nAt a time, each one can pick up any no. of bottles between 1 and 4 (inclusive)\n");
+		this.printStream.print("\nThe one who will have to pick up the last is looser\n");
+		this.printStream.print("\nPlease play first");
 	}
 
 	public static void main(String[] args) {
