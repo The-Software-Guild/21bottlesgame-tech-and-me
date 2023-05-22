@@ -80,7 +80,7 @@ public class WaterBottles21 {
 	public void startGamePlayer1() {
 		int remaining = 21;
 
-		while(remaining > 0) {
+		while(remaining > 1) {
 			printStream.print("How many you would like to pick up? \n");
 			int pick1 = isInputNumberValid();
 			while( pick1 == -1) {
@@ -94,7 +94,7 @@ public class WaterBottles21 {
 		}
 
 		if(remaining == 1) {
-			printStream.print("You will have to pick up the last..you are loser\n");
+			printStream.print("You will have to pick up the last..you are loser");
 		}
 	}
 
