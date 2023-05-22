@@ -46,23 +46,21 @@ public class WaterBottles21 {
 		//   and return back -1
 
 		//YOUR CODE STARTS HERE
-		while (true) {
-			try {
-				int input = scanner.nextInt();
-				scanner.nextLine();
-				if (input >= 1 && input <= 4) {
-					return input;
-				} else {
-					this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive\n");
-				}
-			} catch (InputMismatchException e) {
-				scanner.nextLine(); // Clear the invalid input
-				this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive\n");
-			}   
 
-		}
+		try {
+			int input = scanner.nextInt();
+			scanner.nextLine();
+			if (input >= 1 && input <= 4) {
+				return input;
+			} else {
+				printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
+				return -1;
+			}
+		} catch (InputMismatchException e) {
+			printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
+		}  
 
-
+		return -1;
 		//YOUR CODE ENDS HERE	
 	}
 
@@ -83,25 +81,20 @@ public class WaterBottles21 {
 		int remaining = 21;
 
 		while(remaining > 1) {
-
-
-			this.printStream.print("How many you would like to pick up? ");
-			//Scanner input = new Scanner(System.in);
-
+			printStream.print("How many you would like to pick up? ");
 			int pick1 = isInputNumberValid();
-			//int pick1 = input.nextInt();
 			while( pick1 == -1) {
 				pick1 = isInputNumberValid();
 			}
 
 			int pick2 = pickAfterUser(pick1);
-			this.printStream.print("Computer has picked " + pick2);
+			printStream.print("Computer has picked " + pick2);
 			remaining = remaining - pick1 - pick2;
-			this.printStream.print("The bottles remaining are : " + remaining);
+			printStream.print("The bottles remaining are : " + remaining);
 		}
 
 		if(remaining == 1) {
-			this.printStream.print("You will have to pick up the last..you are loser");
+			printStream.print("You will have to pick up the last..you are loser");
 		}
 	}
 
@@ -109,11 +102,11 @@ public class WaterBottles21 {
 		//To print on console, use this.printStream.print() and NOT the System.out.println()
 		//and using the this.printStream.print(), print below contents on console exactly as below
 
-		this.printStream.print("\nThere are 21 Water bottles");
-		this.printStream.print("\nComputer and yourself, there are 2 players");
-		this.printStream.print("\nAt a time, each one can pick up any no. of bottles between 1 and 4 (inclusive)\n");
-		this.printStream.print("\nThe one who will have to pick up the last is looser\n");
-		this.printStream.print("\nPlease play first");
+		this.printStream.print("There are 21 Water bottles\n");
+		this.printStream.print("Computer and yourself, there are 2 players\n");
+		this.printStream.print("At a time, each one can pick up any no. of bottles between 1 and 4 (inclusive)\n");
+		this.printStream.print("The one who will have to pick up the last is looser\n");
+		this.printStream.print("Please play first\n");
 	}
 
 	public static void main(String[] args) {
