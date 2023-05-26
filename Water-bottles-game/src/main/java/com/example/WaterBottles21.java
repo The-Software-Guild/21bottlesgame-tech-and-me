@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.Random;
 
 /*
 	PLEASE INSERT YOUR CODE STRICTLY BETWEEN BELOW COMMENTED LINES
@@ -67,12 +68,8 @@ public class WaterBottles21 {
 
 	public int pickAfterUser(int pick1) {
 		//YOUR CODE STARTS HERE
-		int remaining = bottles - pick1;
-		int pick2 = (remaining - 1) % 5;
-		if (pick2 == 0) {
-			pick2 = 1;
-		}
-		return pick2;
+		
+		return (5-pick1);
 		//YOUR CODE ENDS HERE
 	}
 
